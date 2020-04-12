@@ -237,11 +237,9 @@ executa()
 
 
 # Verifica se o script já foi testado na distro atual
-for d in "${distros[@]}"; do                     
-    if [[ "${d}" == ${distro} ]]; then
-        continua=1
-    fi
-done
+
+continua=1
+
 
 [[ $continua -eq 0 ]] && { echo -e "Este script ainda não foi testado com ${distro}."; exit 1;} 
 
